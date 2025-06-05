@@ -37,7 +37,7 @@
       </p>
 
       <!-- About Me -->
-      <div class="contact-block">
+      <div class="contact-block about-left">
         <h2>About Me:</h2>
         <ul>
           <li><strong>Full Name:</strong> Frich Tortogo Andres</li>
@@ -52,7 +52,7 @@
       </div>
 
       <!-- Contact Me -->
-      <div class="contact-block">
+      <div class="contact-block about-left">
         <h2>Contact Me:</h2>
         <ul>
           <li><strong>GitHub:</strong> <a href="https://github.com/" target="_blank">github.com</a></li>
@@ -150,6 +150,20 @@
       const nav = document.getElementById('nav-links');
       nav.classList.toggle('show');
     }
+
+    // Close menu when a link is clicked
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('#nav-links a');
+      const nav = document.getElementById('nav-links');
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          if (nav.classList.contains('show')) {
+            nav.classList.remove('show');
+          }
+        });
+      });
+    });
   </script>
 
 </body>
