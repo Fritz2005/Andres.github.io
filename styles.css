@@ -118,6 +118,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.about-left {
+  text-align: left;
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+}
+
+/* Responsive nav for small screens */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
