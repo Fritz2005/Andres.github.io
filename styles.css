@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -102,6 +101,7 @@ nav {
 
 .contact-block {
   margin-top: 30px;
+  text-align: left;
 }
 
 .contact-block h2 {
@@ -118,7 +118,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive nav for small screens */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
