@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
@@ -18,23 +17,20 @@
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="links" id="nav-links">
         <a href="#home">Home</a>
-        <a href="#languages">Programming Languages</a>
         <a href="#pathway">My Learning Pathway</a>
+        <a href="#languages">Programming Languages</a>
         <a href="#pursuit">My Game Design Pursuit</a>
         <a href="#inspiration">Games I Like to Play</a>
       </div>
     </div>
   </nav>
 
-  <!-- HOME -->
+  <!-- Home Section -->
   <section id="home" class="home-section">
     <div class="home-container">
       <img src="images/andres-bonifrich.png" alt="Frich Andres" class="profile-pic" />
       <h1>Frich Andres</h1>
-      <p>
-        I'm a dedicated computer science student who loves creating websites and applications.
-        I'm always eager to explore new technologies and improve my skills.
-      </p>
+      <p>I'm a dedicated computer science student who loves creating websites and applications. I'm always eager to explore new technologies and improve my skills.</p>
 
       <!-- About Me -->
       <div class="contact-block about-left">
@@ -64,7 +60,35 @@
     </div>
   </section>
 
-  <!-- PROGRAMMING LANGUAGES -->
+  <!-- My Learning Pathway -->
+  <section id="pathway" class="section">
+    <h2>My Learning Pathway</h2>
+    <p>💻 <strong>Software Engineering</strong></p>
+    <p>I am a dedicated second-year undergraduate student focused on developing strong skills in modern software development and systems design.</p>
+    <p>I currently hold a GPA of 1.20 and am a consistent Dean’s List awardee.</p>
+    <p>As of now, I am in my second year, halfway through my degree completion.</p>
+    <hr />
+    <h3>🧠 Core Competencies</h3>
+    <ul>
+      <li>Proficiency in Python, Java, and C#</li>
+      <li>Experience with frontend and backend web technologies such as HTML, CSS, and JavaScript</li>
+      <li>Solid understanding of relational databases and SQL</li>
+    </ul>
+    <hr />
+    <h3>🛠️ Experience & Initiatives</h3>
+    <ul>
+      <li>Developed and launched a personal developer portfolio</li>
+      <li>Contributed to academic group research initiatives</li>
+      <li>Participated in team-based software development projects</li>
+    </ul>
+    <p>📊 <strong>Project Status:</strong></p>
+    <ul>
+      <li>✅ Completed Projects: 6</li>
+      <li>🔄 Ongoing Projects: None</li>
+    </ul>
+  </section>
+
+  <!-- Programming Languages -->
   <section id="languages" class="section">
     <h2>Programming Languages</h2>
     <ul>
@@ -75,40 +99,7 @@
     </ul>
   </section>
 
-  <!-- MY LEARNING PATHWAY -->
-  <section id="pathway" class="section">
-    <h2>My Learning Pathway</h2>
-    <p>💻 <strong>Software Engineering</strong></p>
-    <p>I am a dedicated second-year undergraduate student focused on developing strong skills in modern software development and systems design.</p>
-    <p>I currently hold a GPA of 1.20 and am a consistent Dean’s List awardee.</p>
-    <p>As of now, I am in my second year, halfway through my degree completion.</p>
-
-    <hr />
-
-    <h3>🧠 Core Competencies</h3>
-    <ul>
-      <li>Proficiency in Python, Java, and C#</li>
-      <li>Experience with frontend and backend web technologies such as HTML, CSS, and JavaScript</li>
-      <li>Solid understanding of relational databases and SQL</li>
-    </ul>
-
-    <hr />
-
-    <h3>🛠️ Experience & Initiatives</h3>
-    <ul>
-      <li>Developed and launched a personal developer portfolio</li>
-      <li>Contributed to academic group research initiatives</li>
-      <li>Participated in team-based software development projects</li>
-    </ul>
-
-    <p>📊 <strong>Project Status:</strong></p>
-    <ul>
-      <li>✅ Completed Projects: 6</li>
-      <li>🔄 Ongoing Projects: None</li>
-    </ul>
-  </section>
-
-  <!-- MY GAME DESIGN PURSUIT -->
+  <!-- My Game Design Pursuit -->
   <section id="pursuit" class="section">
     <h2>My Game Design Pursuit</h2>
     <ol>
@@ -118,29 +109,27 @@
     </ol>
   </section>
 
-  <!-- GAMING INSPIRATION -->
+  <!-- Games I Like to Play -->
   <section id="inspiration" class="section">
     <h2>Games I Like to Play</h2>
     <div>
       <h3>Honkai: Star Rail</h3>
       <ul>
         <li>Turn-Based RPG</li>
-        <li>Strategic combat, immersive storytelling</li>
-        <li>Currently Playing</li>
+        <li>Strategic combat</li>
+        <li>Immersive Storytelling</li>
       </ul>
-
       <h3>Mobile Legends</h3>
       <ul>
         <li>MOBA – Multiplayer Online Battle Arena</li>
-        <li>Real-time 5v5 battles, frequent events</li>
-        <li>Currently Playing</li>
+        <li>Real-time 5v5 battles</li>
+        <li>Frequent Events</li>
       </ul>
-
       <h3>Minecraft</h3>
       <ul>
         <li>Sandbox Survival / Creative</li>
         <li>Explore, build, survive, and mod</li>
-        <li>Currently Playing</li>
+        <li>Multiplayer</li>
       </ul>
     </div>
   </section>
@@ -151,11 +140,9 @@
       nav.classList.toggle('show');
     }
 
-    // Close menu when a link is clicked
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', () => {
       const links = document.querySelectorAll('#nav-links a');
       const nav = document.getElementById('nav-links');
-
       links.forEach(link => {
         link.addEventListener('click', () => {
           if (nav.classList.contains('show')) {
@@ -165,6 +152,5 @@
       });
     });
   </script>
-
 </body>
 </html>
