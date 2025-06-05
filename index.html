@@ -1,67 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frich Andres | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-            </div>
-            <div class="links">
-                <a href="">Home</a>
-                <a href="">About us</a>
-                <a href="">Services</a>
-            </div>
-            <button>Contact Us</button>
-            <svg xmlns="http://www.w3.org/2000/svg" class="hamburg" height="32" width="34" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-        </div>
-        <div class="dropmenu">
-            <a href="">Home</a>
-            <a href="">About us</a>
-            <a href="">Services</a>    
-            <button>Contact Us</button>
-            <svg xmlns="http://www.w3.org/2000/svg" class="cancel" height="36" width="32" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-        </div>
-    </nav>
-    <section>
-        <div class="content">
-            <div class="main-content">
-                <h1 data-aos="fade-right" data-aos-duration="1500">Hi! I Am</h1>
-                <span data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Frich Andres.</span>
-                <p data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">I'm a dedicated computer science student who loves creating websites and applications. I'm always eager to explore new technologies and continuously improve my computer science skills.</p>
-                <div class="buttons">
-                    <button data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">Hire me</button>
-                    <button data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">See my Work</button>
-                </div>
-            </div>
-            <div class="image">
-                <img src="images/andres-bonifrich.png" alt="Andres Bonifrich">
 
-            </div>
-        </div>
-    </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:1});
-    </script>
-    <script>
-        const hamburg = document.querySelector('.hamburg')
-        const cancel = document.querySelector('.cancel')
-        const navbar = document.querySelector('.dropmenu');
-        
-        hamburg.addEventListener('click', ()=>{
-            navbar.style.transform = "translateY(0px)"
-            hamburg.style.display = 'none'
-        })
-        cancel.addEventListener('click', ()=>{
-            navbar.style.transform = "translateY(-300px)"
-            hamburg.style.display = 'block'
-        })
-    </script>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/andres-bonifrich.png" alt="Profile Picture" />
+        <span class="nav-name">Frich Andres</span>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#languages">Programming Languages</a>
+        <a href="#pathway">My Learning Pathway</a>
+        <a href="#inspiration">My Gaming Inspiration</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="home-section">
+    <div class="home-container">
+      <img src="images/andres-bonifrich.png" alt="Frich Andres" class="profile-pic" />
+      <h1>Frich Andres</h1>
+      <p>
+        I'm a dedicated computer science student who loves creating websites and applications.
+        I'm always eager to explore new technologies and improve my skills.
+      </p>
+
+      <!-- CONTACT MOVED HERE -->
+      <div class="contact-block">
+        <h2>Contact Me:</h2>
+        <ul>
+          <li><strong>GitHub:</strong> <a href="https://github.com/" target="_blank">github.com</a></li>
+          <li><strong>Facebook:</strong> <a href="https://facebook.com/" target="_blank">facebook.com</a></li>
+          <li><strong>X:</strong> <a href="https://x.com/" target="_blank">x.com</a></li>
+          <li><strong>Instagram:</strong> <a href="https://instagram.com/" target="_blank">instagram.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMING LANGUAGES -->
+  <section id="languages" class="section">
+    <h2>Programming Languages</h2>
+    <ul>
+      <li><strong>Python:</strong> Learning syntax fundamentals, basic scripting, and automation.</li>
+      <li><strong>C#:</strong> Learning object-oriented programming and simple desktop app logic.</li>
+      <li><strong>Java:</strong> Basics of OOP, syntax, and simple console apps.</li>
+      <li><strong>JavaScript:</strong> Web interactivity, DOM manipulation, CRUD operations.</li>
+    </ul>
+  </section>
+
+  <!-- LEARNING PATHWAY -->
+  <section id="pathway" class="section">
+    <h2>My Learning Pathway</h2>
+    <p>💻 <strong>Software Engineering:</strong> Dedicated second-year undergraduate honing skills in modern software development and systems design.</p>
+    <p>⭐ GPA: 1.20 — Consistent Dean’s List awardee</p>
+    <p>📘 2nd Year - Halfway to Degree Completion</p>
+    <hr />
+    <p>🧠 <strong>Core Competencies:</strong></p>
+    <ul>
+      <li>✔ Skilled in Python, Java, and C#</li>
+      <li>✔ Frontend & backend web technologies</li>
+      <li>✔ Relational databases and SQL</li>
+    </ul>
+    <hr />
+    <p>🛠️ <strong>Experience & Initiatives:</strong></p>
+    <ul>
+      <li>✔ Built a personal dev portfolio</li>
+      <li>✔ Contributed to academic group research</li>
+      <li>✔ Team-based software builds</li>
+    </ul>
+    <p>📊 Status: 6 Completed Projects, None ongoing</p>
+  </section>
+
+  <!-- GAMING INSPIRATION -->
+  <section id="inspiration" class="section">
+    <h2>My Gaming Inspiration</h2>
+    <div>
+      <h3>Honkai: Star Rail</h3>
+      <ul>
+        <li>Turn-Based RPG</li>
+        <li>Strategic combat, immersive storytelling</li>
+        <li>Currently Playing</li>
+      </ul>
+
+      <h3>Mobile Legends</h3>
+      <ul>
+        <li>MOBA – Multiplayer Online Battle Arena</li>
+        <li>Real-time 5v5 battles, frequent events</li>
+        <li>Currently Playing</li>
+      </ul>
+
+      <h3>Minecraft</h3>
+      <ul>
+        <li>Sandbox Survival / Creative</li>
+        <li>Explore, build, survive, and mod</li>
+        <li>Currently Playing</li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
